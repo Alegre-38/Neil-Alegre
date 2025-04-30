@@ -1,0 +1,402 @@
+/* General Page Styles */
+.page {
+  min-height: calc(100vh - 150px);
+  padding: 3rem 0;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.page-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.page h2 {
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.page h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: var(--secondary-color);
+  border-radius: 2px;
+}
+
+/* Home Page */
+.intro-section {
+  display: flex;
+  gap: 3rem;
+  margin-top: 2rem;
+  align-items: center;
+}
+
+.profile-image {
+  flex: 1;
+  max-width: 350px;
+}
+
+.image-placeholder {
+  background-color: var(--background-light);
+  border: 3px solid var(--primary-color);
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  font-weight: bold;
+  border-radius: 12px;
+  transition: var(--transition);
+}
+
+.actual-image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid var(--primary-color);
+  box-shadow: var(--card-shadow);
+  transition: var(--transition);
+}
+
+.intro-text {
+  flex: 2;
+  line-height: 1.8;
+}
+
+/* About Page */
+.about-section {
+  margin-bottom: 2.5rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition);
+  border: 1px solid var(--border-color);
+}
+
+.about-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-color);
+}
+
+.about-section h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.about-section ul {
+  margin-left: 1.5rem;
+  line-height: 1.8;
+}
+
+/* Education Page */
+.education-list {
+  margin-bottom: 2.5rem;
+}
+
+.education-item {
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition);
+  border: 1px solid var(--border-color);
+}
+
+.education-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-color);
+}
+
+.education-item h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+}
+
+.institution {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.years {
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.courses-section h3 {
+  color: #2563eb;
+  margin-bottom: 1rem;
+}
+
+.courses-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 0.5rem;
+  list-style-position: inside;
+}
+
+/* Projects Page */
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition);
+  border: 1px solid var(--border-color);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-color);
+}
+
+.project-card h3 {
+  background-color: var(--primary-color);
+  color: white;
+  margin: 0;
+  padding: 1.25rem;
+  font-size: 1.25rem;
+}
+
+.project-details {
+  padding: 1.5rem;
+}
+
+.project-description {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.technologies h4 {
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+}
+
+.technologies ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+}
+
+.project-link {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: var(--transition);
+  font-weight: 500;
+}
+
+.project-link:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+/* Contact Page */
+.contact-info {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.contact-item {
+  margin-bottom: 2rem;
+}
+
+.contact-item h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact-icon {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+}
+
+.social-links li {
+  margin-bottom: 1rem;
+}
+
+.social-links a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  background: white;
+  box-shadow: var(--card-shadow);
+}
+
+.social-links a:hover {
+  color: var(--primary-color);
+  transform: translateX(5px);
+  border-color: var(--primary-color);
+}
+
+.social-icon {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.contact-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--border-color);
+}
+
+.contact-form h3 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.enhanced-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 0;
+}
+
+.input-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.form-icon {
+  position: absolute;
+  left: 1rem;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 3rem;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-family: inherit;
+  transition: var(--transition);
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  padding: 0.75rem 1rem;
+  min-height: 150px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(255, 107, 0, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+.submit-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.submit-button:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.button-icon {
+  font-size: 1.1rem;
+}
+
+/* Responsive Design for Contact Page */
+@media (max-width: 768px) {
+  .contact-info {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+  }
+
+  .projects-list {
+    grid-template-columns: 1fr;
+  }
+
+  .courses-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .profile-image {
+    max-width: 100%;
+  }
+} 
